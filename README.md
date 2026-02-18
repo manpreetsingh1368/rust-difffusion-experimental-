@@ -252,31 +252,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## 🎯 Model Setup
 
-### Option 1: Hugging Face CLI
-
-```bash
-# Install HF CLI
-pip install huggingface_hub
-
-# Download model
-huggingface-cli download runwayml/stable-diffusion-v1-5 \
-  --local-dir ./models/stable-diffusion-v1-5
-```
-
-### Option 2: Manual Download
-
-1. Visit https://huggingface.co/runwayml/stable-diffusion-v1-5
-2. Download model files
-3. Place in `./models/stable-diffusion-v1-5/`
-
-### Option 3: Use Your Own Model
-
-```toml
-# config/default.toml
-[model]
-model_path = "/path/to/your/model"
 ```
 
 ## 📊 Performance
