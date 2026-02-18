@@ -346,29 +346,6 @@ spec:
             nvidia.com/gpu: 1
 ```
 
-### AWS ECS
-
-Use the provided ECS task definition in `docs/ecs-task-definition.json`
-
-### Monitoring
-
-- Health endpoint: `http://localhost:8080/health`
-- Metrics: Queue length, generation time, error rate
-- Logs: Structured JSON logs via `tracing`
-
-## 🔐 Security
-
-- [ ] Enable TLS for production
-- [ ] Add API authentication
-- [ ] Set up rate limiting
-- [ ] Configure CORS properly
-- [ ] Regular security updates
-
-## 📚 Documentation
-
-- [Deployment Guide](DEPLOYMENT_GUIDE.md)
-- [Client Examples](CLIENT_EXAMPLES.md)
-- [Production Checklist](PRODUCTION_CHECKLIST.md)
 
 ## 🤝 Contributing
 
