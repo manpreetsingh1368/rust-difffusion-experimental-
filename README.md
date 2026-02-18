@@ -1,6 +1,6 @@
 # 🎨 Diffusion Server
 
-A production-ready, general-purpose image generation server built in Rust. Serves Stable Diffusion models via gRPC and REST APIs.
+A production-ready, general-purpose image generation server built in Rust. Serves experimental Diffusion models via gRPC and REST APIs.
 
 ## ✨ Features
 
