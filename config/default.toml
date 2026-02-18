@@ -1,0 +1,29 @@
+[server]
+grpc_host = "0.0.0.0"
+grpc_port = 50051
+rest_host = "0.0.0.0"
+rest_port = 8080
+max_concurrent_requests = 10
+request_timeout_seconds = 300
+
+[model]
+model_path = "./models/stable-diffusion-v1-5"
+device = "cpu"  # Options: "cpu", "cuda", "cuda:0", "cuda:1", etc.
+precision = "fp16"  # Options: "fp32", "fp16", "bf16"
+cache_dir = "./cache"
+warmup_on_start = false
+
+[inference]
+default_steps = 50
+default_guidance_scale = 7.5
+default_width = 512
+default_height = 512
+max_width = 1024
+max_height = 1024
+max_steps = 150
+safety_checker = false
+
+[queue]
+backend = "memory"  # Options: "memory", "redis"
+max_queue_size = 1000
+worker_threads = 2

@@ -1,0 +1,43 @@
+[package]
+name = "diffusion-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+futures = "0.3"
+async-trait = "0.1"
+
+# gRPC
+tonic = { version = "0.11", features = ["transport"] }
+prost = "0.12"
+
+# Web server (REST API)
+actix-web = "4.4"
+actix-cors = "0.7"
+
+# ML/Image Processing
+tch = "0.13.0"
+image = "0.24"
+rand = "0.8"
+
+# Utilities
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+config = "0.13"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+base64 = "0.21"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[build-dependencies]
+tonic-build = "0.11"
+
+[[bin]]
+name = "diffusion-server"
+path = "src/main.rs"
